@@ -1,0 +1,64 @@
+/* Fase preparatoria
+
+il programma genera casualmente la dimensione della matrice quadrata scegliendo un numero tra 4 e 7;
+in caso di matrice con numero di elementi dispari inserire lo zero in una posizione casuale;
+il programma inserisce nella matrice le coppie di caratteri in modo casuale;
+il programma visualizza una matrice di asterischi (tessere coperte);
+Gioco
+l'utente inserisce le coordinate di due tessere;
+il programma scopre le due tessere,  se sono uguali le lascia scoperte, se sono diverse le ricopre dopo 2 secondi;
+il gioco finisce quando vengono scoperte tutte le tessere;
+a fine gioco il programma segnala il numero di tentativi effettuati dal giocatore;
+Effettuare almeno un commit  per ogni funzionalità elencata. */
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+/*  */
+int main(int argc, char** argv) {
+	srand(time(NULL));
+	const int d = rand() % 4 + 4;
+	int x[d][d];
+	if (d == 3 || d == 5 || d == 7){
+	const int p1 = rand() % 4 + 4;
+	const int p2 = rand() % 4 + 4;
+	x[p1][p2] == 0;
+	}
+//	65-90 lettere maiuscole	
+	int i = 0,h = d*d + 1;
+	while (i<d*d){
+		x[d][d] = rand() % h;
+	// devo mettere generatore di posti casuali
+	i++;
+	}
+	
+	
+	
+	
+	return 0;
+}
+//{}
+/*#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+    	srand(time(NULL));
+    	int d = rand() % 4 + 4;
+    	cout<<d<<endl;
+    	cout<<endl;
+    	int i=0;
+    	int pollo = d*d + 1;
+    	while (i<100){
+    	
+    	int x = rand() % pollo;
+    	    cout<<x<<endl;
+    	    i++;
+    	    
+    	} 
+
+    return 0;
+}*/
