@@ -1,0 +1,110 @@
+/* Fase preparatoria
+
+il programma genera casualmente la dimensione della matrice quadrata scegliendo un numero tra 4 e 7;
+in caso di matrice con numero di elementi dispari inserire lo zero in una posizione casuale;
+il programma inserisce nella matrice le coppie di caratteri in modo casuale;
+il programma visualizza una matrice di asterischi (tessere coperte);
+Gioco
+l'utente inserisce le coordinate di due tessere;
+il programma scopre le due tessere,  se sono uguali le lascia scoperte, se sono diverse le ricopre dopo 2 secondi;
+il gioco finisce quando vengono scoperte tutte le tessere;
+a fine gioco il programma segnala il numero di tentativi effettuati dal giocatore;
+Effettuare almeno un commit  per ogni funzionalità elencata. */
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+/*  */
+int main(int argc, char** argv) {
+	srand(time(NULL));
+	const int d = rand() % 4 + 4;
+	int x[7][7];
+	char y[7][7];
+	if (d == 3 || d == 5 || d == 7){
+	const int p3 = rand() % 4 + 4;
+	const int p4 = rand() % 4 + 4;
+	x[p3][p4] == 0;
+	}
+	cout<<"num "<<d<<"    ";
+//	65-90 lettere maiuscole	
+	int p1ap[7], ap = 0;
+	int i = 0, i2 = 0;
+	int p1 = 0,p2 = 0,p3 = 0;
+	while (i != d*d){
+		if ( i%d == 0 ){
+			int i5 = 0;
+			while (i5<7){
+				if (i5 == 0)
+				p3 = rand() % 4 + 4;
+				ap = 0;
+				while(ap<7){
+					if ( p1ap[ap] == p3 ){
+					p1ap[ap] = p3;
+					}
+				ap++;
+				}
+			i5++;
+			}
+		p2 = p3;
+		ap++;
+		}
+	if ( y[p1][p2] == 0 ){
+	continue;
+	}
+	// ciclo while per p2 i<7
+	y[p1][p2] == (char)65 + i2;
+	cout<<" "<<y[p1][p2]<<" ";
+	i++;
+	if ( i%2 == 0 )
+	i2++;
+	}
+/*	while (i1 != d){ 
+	    cout<<" "<<i2<<" ";
+	    // devo mettere generatore di posti casuali
+	    x[i1][i2] = rand() % 26 + 65; // 65-90
+	    // convertiamo il valore casuale generato in char
+	    y[i1][i2] = (char)x[i1][i2];
+	    cout<<" "<<y[i1][i2]<<" ";
+	    i2++;
+	    // ogni volta che i2 arriva al limite del array si resetta e incrementa laltro valore per riempire tutta la matrica
+	    if ( i2%d == 0 ){
+	        i1++;
+	        i2 = 0; 
+	    }
+
+	}
+	//ora devo controllare tutte le lettere e cambiarle se ce ne sono piu di due
+	i1 = 0;
+	i2 = 0;
+	int i3 = 0, i4 = 1;
+	// il problema del codice è che il ciclo non puo finire perche le lettere (25) non sono abbastantanza per reggiungere d
+	// devo fare il controllo non per singola lettera ma doppie
+	/*
+	while (i3 != d){	
+	        while ( y[i1][i2] == y[i3][i4] ){
+	            x[i1][i2] = rand() % 26 + 65;
+	        }
+	        y[i1][i2] = (char)x[i1][i2];
+	        i1 = 0;
+	        i2 = 0;
+	        i3 = 0;
+	        i4 = 1;
+	        }
+	    cout<<" "<<y[i1][i2]<<" ";
+	    i2++;
+	    i4++;
+	    if ( i2%d == 0 ){
+	        i1++;
+	        }
+	    if ( i4%d == 0 ){
+	        i3++;
+	        }
+	}
+	
+	*/
+	
+	
+	return 0;
+}
+//{}
